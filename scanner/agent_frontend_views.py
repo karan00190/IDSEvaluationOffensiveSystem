@@ -28,11 +28,11 @@ def _enrich_agent(agent):
       - is_online: was last heartbeat within 60 seconds?
       - scan_count: how many scans submitted
     """
-    if agent.last_seen_at:
-        # If heartbeat is less than 90 seconds old — agent is online
-        agent.is_online = (timezone.now() - agent.last_seen_at).seconds < 90
-    else:
-        agent.is_online = False
+    # if agent.last_seen_at:
+    #     # If heartbeat is less than 90 seconds old — agent is online
+    #     agent.is_online = (timezone.now() - agent.last_seen_at).seconds < 90
+    # else:
+    #     agent.is_online = False
     return agent
 
 
